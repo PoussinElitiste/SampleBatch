@@ -1,0 +1,1 @@
+for  %1 in  (..\*.zip) do "C:\Program Files\Eoc\Scripts\tools\gunzip\unzip.exe" %1
