@@ -2,17 +2,17 @@
 
 SET YYYYMMDD=%DATE:~6,4%%DATE:~3,2%%DATE:~0,2%
 SET YYMMDD=%DATE:~8,2%%DATE:~3,2%%DATE:~0,2%
-REM inverse la variable %DATE% pour obtenir une date en Année mois jour bien plus facile à trier
+REM inverse la variable %DATE% pour obtenir une date en Annï¿½e mois jour bien plus facile ï¿½ trier
 
 for /F "tokens=1,2,3,4,5,6 delims==:.-/, " %%A in ("%TIME%") do SET MYTIME=%%A%%B%%C%%D%%E%%F
-REM cette boucle permet de filtrer la variable %TIME% afin d'en éliminer tout caractère indésirable
-REM dans un nom de fichier. On suppose que %TIME% se divise en 6 parties délimitées par [:.-/, ].
-REM le nombre de parties et les délimiteurs n'ont pas à être exactes, il suffit qu'ils couvrent  
-REM le problème.
+REM cette boucle permet de filtrer la variable %TIME% afin d'en ï¿½liminer tout caractï¿½re indï¿½sirable
+REM dans un nom de fichier. On suppose que %TIME% se divise en 6 parties dï¿½limitï¿½es par [:.-/, ].
+REM le nombre de parties et les dï¿½limiteurs n'ont pas ï¿½ ï¿½tre exactes, il suffit qu'ils couvrent  
+REM le problï¿½me.
      
 
 SET FILEUID=NOMFICHIER_%YYYYMMDD%_%MYTIME%_%RANDOM%
-REM enfin on rajoute un nombre aléatoire au nom du fichier afin de le rendre unique
+REM enfin on rajoute un nombre alï¿½atoire au nom du fichier afin de le rendre unique
 
 echo %FILEUID%
 echo %YYMMDD%
